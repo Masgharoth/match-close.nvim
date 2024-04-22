@@ -42,6 +42,9 @@ local function match_close(reference)
 		j = j + 1
 	end
 end
+
+local M(){
+
 vim.keymap.set("i", ">", function()
 	match_close(">")
 end)
@@ -65,5 +68,7 @@ end)
 vim.keymap.set("i", '"', function()
 	match_close('"')
 end)
+}
+return { M }
 
-return {}
+-- vim: ts=4 sts=4 sw=4 et
