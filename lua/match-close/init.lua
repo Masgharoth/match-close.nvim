@@ -43,32 +43,33 @@ local function match_close(reference)
 	end
 end
 
-local M(){
+local M = {}
 
-vim.keymap.set("i", ">", function()
-	match_close(">")
-end)
+M.setup = function()
+	vim.keymap.set("i", ">", function()
+		match_close(">")
+	end)
 
-vim.keymap.set("i", "}", function()
-	match_close("}")
-end)
+	vim.keymap.set("i", "}", function()
+		match_close("}")
+	end)
 
-vim.keymap.set("i", ")", function()
-	match_close(")")
-end)
+	vim.keymap.set("i", ")", function()
+		match_close(")")
+	end)
 
-vim.keymap.set("i", "]", function()
-	match_close("]")
-end)
+	vim.keymap.set("i", "]", function()
+		match_close("]")
+	end)
 
-vim.keymap.set("i", "'", function()
-	match_close("'")
-end)
+	vim.keymap.set("i", "'", function()
+		match_close("'")
+	end)
 
-vim.keymap.set("i", '"', function()
-	match_close('"')
-end)
-}
+	vim.keymap.set("i", '"', function()
+		match_close('"')
+	end)
+end
 return { M }
 
 -- vim: ts=4 sts=4 sw=4 et
